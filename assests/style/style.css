@@ -143,22 +143,22 @@ h1 {
 
 
 
-/*---------------------------scrolling Design-------------------------------------*/
-
+/*---------------------------Scrolling Design-------------------------------------*/
 .scrolling-page {
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     background-color: var(--scrol-color);
     position: absolute;
     top: 0;
     width: 100%;
     transform: translateY(0);
-    transition: transform 0.5s ease; /* Smooth transition for scroll effect */
-    overflow-y: auto; /* Enable scrolling for content */
+    transition: transform 0.5s ease;
+    overflow-y: auto;
     z-index: 50;
+    
 }
 
 .scrolling-page.open {
-    transform: translateY(-100%); /* Move the scrolling page up */
+    transform: translateY(-100%);
 }
 
 .scrolling-page h1 {
@@ -173,6 +173,40 @@ h1 {
     color: var(--text-color);
     font-size: 2rem;
     letter-spacing: 1.5rem;
+}
+
+/* Graduation Cap on "R" */
+.graduation-cap {
+    position: relative;
+    display: inline-block;
+}
+
+.graduation-cap::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    mix-blend-mode: multiply;
+    filter: brightness(0) invert(1);
+    background-image: url('https://cdn-icons-png.flaticon.com/512/0/422.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.graduation-cap::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 15px;
+    background-color: #f8f3f3;
+    z-index: 0;
 }
 
 /*---------------------------Header Design-------------------------------------*/
@@ -206,9 +240,9 @@ nav{
 }
 
 .navbar>a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--text-color);
-    margin-left: 4rem;
+    margin-left: 2rem;
     transition: 0.3s;
 }
 
@@ -288,20 +322,90 @@ input[type = 'checkbox']:checked~.sun{
 
 
 /*---------------------------Home Design-------------------------------------*/
-
-
-.home{
+.home {
     margin-top: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    /* Ensures the background animation doesn't overflow */
 }
 
-.home>div>h1>span{
+.home::before,
+.home::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white */
+    border-radius: 50%;
+    z-index: -1;
+    /* Place behind the content */
+    animation: float 6s ease-in-out infinite;
+}
+
+.home::before {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+    /* Start immediately */
+}
+
+.home::after {
+    bottom: 10%;
+    right: 5%;
+    animation-delay: 3s;
+    /* Start after 3 seconds */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.1);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Additional Background Circles */
+.home .home-content::before,
+.home .home-content::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    /* Very light transparent */
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 4s ease-in-out infinite;
+}
+
+.home .home-content::before {
+    top: 20%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.home .home-content::after {
+    bottom: 20%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+/* Existing Styles */
+.home>div>h1>span {
     color: var(--main-color);
 }
 
-#myName::first-line{
+#myName::first-line {
     color: var(--text-color);
 }
 
@@ -315,7 +419,7 @@ p {
     font-size: 1.2rem;
 }
 
-#homePic{
+#homePic {
     overflow-clip-margin: content-box;
     overflow: clip;
     width: 30vw;
@@ -326,27 +430,26 @@ p {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-2.4rem);
     }
+
     100% {
         transform: translateY(0);
     }
 }
 
-
-.typing{
+.typing {
     color: var(--text-color);
 }
 
 .typing::after {
     content: '';
     height: 100%;
-
     background-color: var(--main-color);
     animation: typing 1.2s ease infinite;
 }
-
 
 @keyframes typing {
     0% {
@@ -359,55 +462,150 @@ p {
 }
 
 /*---------------------------About Design-------------------------------------*/
-
-.about{
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    /* Ensures the background animation doesn't overflow */
 }
 
-.about-section{
+.about::before,
+.about::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(120, 71, 255, 0.2);
+    /* Tomato color with transparency */
+    border-radius: 50%;
+    z-index: -1;
+    /* Place behind the content */
+    animation: float 6s ease-in-out infinite;
+}
+
+.about::before {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+    /* Start immediately */
+}
+
+.about::after {
+    bottom: 10%;
+    right: 5%;
+    animation-delay: 3s;
+    /* Start after 3 seconds */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.1);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Additional Background Shapes */
+.about .about-section::before,
+.about .about-section::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(30, 144, 255, 0.2);
+    /* Dodger Blue with transparency */
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 4s ease-in-out infinite;
+}
+
+.about .about-section::before {
+    top: 20%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.about .about-section::after {
+    bottom: 20%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+/* Additional Colorful Shapes */
+.about .about-content::before,
+.about .about-content::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(55, 57, 61, 0.2);
+    /* Lime Green with transparency */
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 5s ease-in-out infinite;
+}
+
+.about .about-content::before {
+    top: 30%;
+    left: 30%;
+    animation-delay: 1.5s;
+}
+
+.about .about-content::after {
+    bottom: 30%;
+    right: 30%;
+    animation-delay: 2.5s;
+}
+
+/* Existing Styles */
+.about-section {
     display: flex;
 }
 
-.about-content{
+.about-content {
     padding-top: 10vh;
 }
 
-.about-content>h1>span{
+.about-content>h1>span {
     color: var(--text-color);
 }
 
-.about-img{
+.about-img {
     padding-right: 2vw;
     margin-left: 4rem;
     margin-right: 4rem;
 }
 
-.about-img>img{
+.about-img>img {
     width: 35vw;
     height: 80vh;
-
 }
 
-.heading{
+.heading {
     text-align: center;
     font-size: 4.2rem;
 }
 
-.about-content h2{
+.about-content h2 {
     text-align: left;
     line-height: 1.2;
 }
 
-
-
-.about-content h3{
+.about-content h3 {
     font-size: 2.3rem;
     color: var(--main-color);
     font-style: normal;
 }
+
 .about-content ul {
     font-size: 1.5rem;
     margin: 2rem 0 3rem;
@@ -418,21 +616,21 @@ p {
     list-style: none;
 }
 
-.about-content > ul > li {
+.about-content>ul>li {
     display: contents;
 }
 
-.about-content > ul > li > span:first-child {
+.about-content>ul>li>span:first-child {
     font-weight: 500;
     color: var(--text-color);
 }
 
-.about-content > ul > li > span:last-child {
+.about-content>ul>li>span:last-child {
     color: var(--main-color);
     font-weight: 400;
 }
 
-.about-content button{
+.about-content button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -608,49 +806,76 @@ p {
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 4rem;
-    perspective: 1000px;
-    /* Adds 3D perspective */
 }
 
 .services-container .services-box {
     flex: 1 1 25rem;
-    /* Adjusted width */
     background: var(--box-color);
-    padding: 1rem 1.2rem 2rem;
-    /* Reduced padding */
-    border-radius: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
     text-align: center;
-    border: 0.2rem solid var(--main-color);
+    position: relative;
+    overflow: hidden;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 0 0 1.4rem var(--main-color);
-    transform-style: preserve-3d;
-    /* Enables 3D transformations */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .services-container .services-box:hover {
-    transform: rotateY(10deg) scale(1.05);
-    /* 3D rotation and scaling */
-    box-shadow: 0 0 2rem var(--main-color);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.services-box .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.services-box:hover .icon-wrapper {
+    background: var(--text-color);
 }
 
 .services-box img {
-    height: 6rem;
-    /* Reduced image size */
-    margin-bottom: 1.5rem;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.services-box:hover img {
+    transform: scale(1.2);
 }
 
 .services-box h3 {
     color: white;
-    font-size: 2rem;
-    /* Reduced font size */
-    font-style: normal;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 .services-box p {
-    font-size: 1.2rem;
-    /* Reduced font size */
-    margin: 1rem 0 2rem;
+    font-size: 1.1rem;
     color: white;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.services-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.services-box:hover .overlay {
+    opacity: 1;
 }
 
 /*---------------------------Projects Design-------------------------------------*/
