@@ -899,7 +899,7 @@ p {
 }*/
 
 
-.wrapper{
+.wrapper {
     border: none;
     position: relative;
     width: 410px;
@@ -909,7 +909,7 @@ p {
     perspective: 1000px;
 }
 
-.carousel{
+.carousel {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -918,7 +918,7 @@ p {
     transition: transform 1s;
 }
 
-.cell{
+.cell {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -928,39 +928,48 @@ p {
     transition: transform 1s, opacity 1s;
 }
 
-.cell img{
+.cell img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
+    /* This will make the image circular */
+    object-fit: cover;
+    /* Ensures the image covers the entire circle without distortion */
 }
 
-.cell:nth-child(1){
+.cell:nth-child(1) {
     transform: rotateY(0deg) translateZ(288px);
 }
 
-.cell:nth-child(2){
+.cell:nth-child(2) {
     transform: rotateY(40deg) translateZ(288px);
 }
 
-.cell:nth-child(3){
+.cell:nth-child(3) {
     transform: rotateY(80deg) translateZ(288px);
 }
 
-.cell:nth-child(4){
+.cell:nth-child(4) {
     transform: rotateY(120deg) translateZ(288px);
 }
-.cell:nth-child(5){
+
+.cell:nth-child(5) {
     transform: rotateY(160deg) translateZ(288px);
 }
-.cell:nth-child(6){
+
+.cell:nth-child(6) {
     transform: rotateY(200deg) translateZ(288px);
 }
-.cell:nth-child(7){
+
+.cell:nth-child(7) {
     transform: rotateY(240deg) translateZ(288px);
 }
-.cell:nth-child(8){
+
+.cell:nth-child(8) {
     transform: rotateY(280deg) translateZ(288px);
 }
-.cell:nth-child(9){
+
+.cell:nth-child(9) {
     transform: rotateY(320deg) translateZ(288px);
 }
 
