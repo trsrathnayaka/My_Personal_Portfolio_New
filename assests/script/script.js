@@ -29,7 +29,7 @@ checkbox.addEventListener('click',() => {
 //typing animation
 document.addEventListener("DOMContentLoaded", function() {
     const typed = new Typed('.typing', {
-        strings: ["Software Engineer..", "Web Developer..", "UI/UX Designer..", "You Tuber.."],
+        strings: ["Software Engineer..", "Web Developer..", "Mobile App Developer..", "UI/UX Designer..", "You Tuber.."],
         typeSpeed: 60,
         backSpeed: 30,
         backDelay: 600,
