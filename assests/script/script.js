@@ -33,7 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Add this script for mobile menu toggle
+document.querySelector('.menu-btn').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+});
 
+// Close menu when clicking on a link (for mobile)
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', function() {
+        if (window.innerWidth <= 1200) {
+            document.querySelector('.navbar').classList.remove('active');
+        }
+    });
+});
 
 //cursor
 const cursor = document.querySelector("#cursor");
