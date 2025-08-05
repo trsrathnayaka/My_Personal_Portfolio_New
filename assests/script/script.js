@@ -1,3 +1,40 @@
+// Project Tabs Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all tab buttons and project categories
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const projectCategories = document.querySelectorAll('.project-category');
+    
+    // Set the first tab as active by default
+    if (tabButtons.length > 0 && projectCategories.length > 0) {
+        tabButtons[0].classList.add('active');
+        projectCategories[0].classList.add('active');
+    }
+    
+    // Add click event listeners to each tab button
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons and categories
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            projectCategories.forEach(cat => cat.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Show corresponding category with animation
+            const categoryId = this.getAttribute('data-category');
+            const activeCategory = document.getElementById(`${categoryId}-projects`);
+            if (activeCategory) {
+                activeCategory.classList.add('active');
+                // Trigger reflow to enable animation
+                void activeCategory.offsetWidth;
+                activeCategory.style.animation = 'fadeIn 0.5s ease';
+            }
+        });
+    });
+});
+
+
+
 //cursor
 const cursor = document.querySelector("#cursor");
 document.addEventListener("mousemove", function (e){

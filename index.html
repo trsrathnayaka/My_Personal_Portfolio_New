@@ -450,12 +450,20 @@
 <!-----------------------------Projects Design---------------------------------->
 
 <section id="projects" class="projects">
-    <h1 class="heading"> < PROJECTS />
+    <h1 class="heading">
+        < PROJECTS />
     </h1>
 
+    <!-- Project Category Tabs -->
+    <div class="project-tabs">
+        <button class="tab-btn active" data-category="web">Web Development</button>
+        <button class="tab-btn" data-category="mobile">Mobile App Development</button>
+        <button class="tab-btn" data-category="uiux">UI/UX Design</button>
+        <button class="tab-btn" data-category="graphic">Graphic Design</button>
+    </div>
+
     <!-- Web Development Projects -->
-    <div class="category-section">
-        <h2 class="category-title">Web Development</h2>
+    <div class="project-category active" id="web-projects">
         <div class="projects-container">
             <div class="projects-box">
                 <a href="https://github.com/trsrathnayaka/Fitness-app-main">
@@ -467,42 +475,27 @@
             </div>
             <div class="projects-box">
                 <a href="https://github.com/trsrathnayaka/Visit-Srilanka-main-webdev">
-                    <img src="assests/images/project/2.png" alt="Visit Sri Lanka Web App">
+                    <img src="assests/images/project/4.png" alt="Visit Sri Lanka Web App">
                     <br>
                     <h5>HTML, CSS, JS</h5>
                     <h4>Visit Sri Lanka Web Application</h4>
                 </a>
             </div>
             <div class="projects-box">
-                <a href="https://github.com/trsrathnayaka/Landrover-super--car-website">
-                    <img src="assests/images/project/3.png" alt="Car Rental Web System">
+                <a href="https://github.com/trsrathnayaka/Visit-Srilanka-main-webdev">
+                    <img src="assests/images/project/12.png" alt="Visit Sri Lanka Web App">
                     <br>
-                    <h5>HTML, CSS, JS</h5>
-                    <h4>Car Rental Web System</h4>
+                    <h5>React JS, Spring Boot</h5>
+                    <h4>Online Job Portal System</h4>
                 </a>
             </div>
-            <div class="projects-box">
-                <a href="https://github.com/trsrathnayaka/Fully-Functional-Job-Portal-System-FrontEnd">
-                    <img src="assests/images/project/12.png" alt="Job Hunter Web App">
-                    <br>
-                    <h5>REACT JS</h5>
-                    <h4>Job Hunter Web Application</h4>
-                </a>
-            </div>
-            <div class="projects-box">
-                <a href="https://github.com/trsrathnayaka/SLIBTEC-Inventory-System-2024">
-                    <img src="assests/images/project/11.png" alt="ERP System">
-                    <br>
-                    <h5>PHP, MYSQL</h5>
-                    <h4>ERP System</h4>
-                </a>
-            </div>
+            
+            <!-- Add more web projects here -->
         </div>
     </div>
 
     <!-- Mobile App Development Projects -->
-    <div class="category-section">
-        <h2 class="category-title">Mobile App Development</h2>
+    <div class="project-category" id="mobile-projects">
         <div class="projects-container">
             <div class="projects-box">
                 <a href="https://github.com/trsrathnayaka/MAD_Group_Project-Frontend">
@@ -513,51 +506,101 @@
                 </a>
             </div>
             <div class="projects-box">
-                <a href="#">
-                    <img src="assests/images/project/14.jpg" alt="ToyMingle App">
+                <a href="https://github.com/trsrathnayaka/MAD_Group_Project-Frontend">
+                    <img src="assests/images/project/14.jpg" alt="Dine Delish App">
                     <br>
                     <h5>Flutter</h5>
-                    <h4>ToyMingle Mobile Application</h4>
+                    <h4>Toy Mingle Mobile Application</h4>
                 </a>
             </div>
             <div class="projects-box">
-                <a href="#">
-                    <img src="assests/images/project/13.jpg" alt="Barber-Go App">
+                <a href="https://github.com/trsrathnayaka/MAD_Group_Project-Frontend">
+                    <img src="assests/images/project/21.jpg" alt="Dine Delish App">
                     <br>
                     <h5>Flutter</h5>
-                    <h4>Barber-Go Mobile Application</h4>
+                    <h4>BarGo Mobile Application</h4>
                 </a>
             </div>
+            <!-- Add more mobile projects here -->
         </div>
     </div>
 
     <!-- UI/UX Design Projects -->
-    <div class="category-section">
-        <h2 class="category-title">UI/UX Design</h2>
+    <div class="project-category" id="uiux-projects">
         <div class="projects-container">
             <div class="projects-box">
                 <a
-                    href="https://www.figma.com/design/aKTYMFDrVSaGd1P6wekfBu/MoraUxplore-final-design----round2?node-id=0-1&p=f&t=gxPpHmj4vQtRztAf-0">
-                    <img src="assests/images/project/8.jpg" alt="UGC Website Design">
+                    href="https://bolgodalakeboatsafari.com/">
+                    <img src="assests/images/project/17.jpg" alt="UGC Website Design">
                     <br>
                     <h5>UI/UX</h5>
-                    <h4>UGC Website Sri Lanka UI/UX Design</h4>
+                    <h4>Bolgoda Lake Boat Safari Web Design</h4>
+                </a>
+            </div>
+            <div class="projects-box">
+                <a
+                    href="#">
+                    <img src="assests/images/project/20.jpg" alt="UGC Website Design">
+                    <br>
+                    <h5>UI/UX</h5>
+                    <h4>Ransavi Construction Web Design</h4>
+                </a>
+            </div>
+            <div class="projects-box">
+                <a
+                    href="https://clyftic.com/">
+                    <img src="assests/images/project/19.jpg" alt="UGC Website Design">
+                    <br>
+                    <h5>UI/UX</h5>
+                    <h4>Clyftic Lab Web Design</h4>
+                </a>
+            </div>
+            <div class="projects-box">
+                <a href="https://saharaconstruction.lk/">
+                    <img src="assests/images/project/18.jpg" alt="UGC Website Design">
+                    <br>
+                    <h5>UI/UX</h5>
+                    <h4>Sahara Construction Web Design</h4>
+                </a>
+            </div>
+            <div class="projects-box">
+                <a href="https://ape-cantima-pvt-ltd2.odoo.com/">
+                    <img src="assests/images/project/7.jpg" alt="UGC Website Design">
+                    <br>
+                    <h5>UI/UX</h5>
+                    <h4>Ape Cantima Web Design</h4>
                 </a>
             </div>
             <div class="projects-box">
                 <a href="#">
-                    <img src="assests/images/project/9.png" alt="Ayubowan Sri Lanka Design">
+                    <img src="assests/images/project/16.jpg" alt="UGC Website Design">
                     <br>
                     <h5>UI/UX</h5>
-                    <h4>Ayubowan Sri Lanka Website UI/UX Design</h4>
+                    <h4>QFMG Web Design</h4>
                 </a>
             </div>
+            <div class="projects-box">
+                <a href="https://www.ibehighereducation.lk/">
+                    <img src="assests/images/project/15.jpg" alt="UGC Website Design">
+                    <br>
+                    <h5>UI/UX</h5>
+                    <h4>IBE Higher Education Web Design</h4>
+                </a>
+            </div>
+            <div class="projects-box">
+                <a href="#">
+                    <img src="assests/images/project/22.jpg" alt="UGC Website Design">
+                    <br>
+                    <h5>UI/UX</h5>
+                    <h4>Candy Shop Web Design</h4>
+                </a>
+            </div>
+            <!-- Add more UI/UX projects here -->
         </div>
     </div>
 
     <!-- Graphic Design Projects -->
-    <div class="category-section">
-        <h2 class="category-title">Graphic Design</h2>
+    <div class="project-category" id="graphic-projects">
         <div class="projects-container">
             <div class="projects-box">
                 <a href="#">
@@ -567,14 +610,7 @@
                     <h4>Brand Identity Design</h4>
                 </a>
             </div>
-            <div class="projects-box">
-                <a href="#">
-                    <img src="assests/images/project/graphic2.jpg" alt="Graphic Design 2">
-                    <br>
-                    <h5>Adobe Illustrator</h5>
-                    <h4>Marketing Materials</h4>
-                </a>
-            </div>
+            <!-- Add more graphic design projects here -->
         </div>
     </div>
 
@@ -582,6 +618,7 @@
         <h4>See More</h4>
     </a>
 </section>
+
 
 <!-----------------------------Blogs Design---------------------------------->
 
